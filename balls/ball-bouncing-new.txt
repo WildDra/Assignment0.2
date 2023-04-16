@@ -1,0 +1,66 @@
+PVector location;  // Location of shape
+PVector velocity;  // Velocity of shape
+PVector gravity;   // Gravity acts at the shape's acceleration
+PVector location1;  // Location of shape
+PVector velocity1;  // Velocity of shape
+PVector gravity1;   // Gravity acts at the shape's acceleration
+
+void setup() {
+  size(640,360);
+  location = new PVector(100,100);
+  velocity = new PVector(1.5,2.1);
+  gravity = new PVector(0,0.2);
+  
+  location1 = new PVector(300,300);
+  velocity1 = new PVector(3,4.2);
+  gravity1 = new PVector(0,0.5);
+    
+}
+
+void draw() {
+  background(0);
+  
+  // Add velocity to the location.
+  location.add(velocity);
+  // Add gravity to velocity
+  velocity.add(gravity);
+  
+    // Add velocity to the location.
+  location1.add(velocity1);
+  // Add gravity to velocity
+  velocity1.add(gravity1);
+  
+  // Bounce off edges
+  if ((location.x > width) || (location.x < 0)) {
+    velocity.x = velocity.x * -1;
+  }
+  
+  if (location.y > height) {
+    // We're reducing velocity ever so slightly 
+    // when it hits the bottom of the window
+    velocity.y = velocity.y * -0.95; 
+    location.y = height;
+  }
+
+ if ((location1.x > width) || (location1.x < 0)) {
+    velocity1.x = velocity1.x * -1;
+  }
+  
+  if (location1.y > height) {
+    // We're reducing velocity ever so slightly 
+    // when it hits the bottom of the window
+    velocity1.y = velocity1.y * -0.95; 
+    location1.y = height;
+  }
+  
+  // Display circle at location vector
+  stroke(255);
+  strokeWeight(2);
+  fill(127);
+  ellipse(location.x,location.y,48,48);
+  
+  stroke(242,229,203);
+  strokeWeight(5);
+  fill(175, 76, 101);
+  ellipse(location1.x,location1.y,30,30);
+}

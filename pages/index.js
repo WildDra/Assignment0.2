@@ -19,6 +19,10 @@ export default function Home() {
           Get started by knowing <>ME</>
         </p>
 
+        <Link href="/index.html">
+        <span>Tap this to see wonderfull balls!!</span>
+        </Link>
+
         <p className={styles.description}>
         <img src="https://media.tenor.com/kvXMS__Bkd8AAAAC/hello-hi.gif" alt="Your GIF" width="200" height="200" />
         </p>
