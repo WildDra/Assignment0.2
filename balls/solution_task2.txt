@@ -1,0 +1,69 @@
+Comparing files ball-bouncing.txt and BALL-BOUNCING-NEW.TXT
+***** ball-bouncing.txt
+PVector location;  
+PVector velocity;  
+PVector gravity;  
+
+***** BALL-BOUNCING-NEW.TXT
+PVector location;
+PVector velocity;  
+PVector gravity;   
+PVector location1;  
+PVector velocity1;  
+PVector gravity1;   
+
+*****
+
+***** ball-bouncing.txt
+  gravity = new PVector(0,0.2);
+    
+***** BALL-BOUNCING-NEW.TXT
+  gravity = new PVector(0,0.2);
+  location1 = new PVector(300,300);
+  velocity1 = new PVector(3,4.2);
+  gravity1 = new PVector(0,0.5);
+    
+*****
+
+***** ball-bouncing.txt
+  velocity.add(gravity);
+ 
+  if ((location.x > width) || (location.x < 0)) {
+***** BALL-BOUNCING-NEW.TXT
+  velocity.add(gravity);
+  location1.add(velocity1);
+  velocity1.add(gravity1);
+  
+  if ((location.x > width) || (location.x < 0)) {
+*****
+
+***** ball-bouncing.txt
+
+  stroke(255);
+***** BALL-BOUNCING-NEW.TXT
+
+ if ((location1.x > width) || (location1.x < 0)) {
+    velocity1.x = velocity1.x * -1;
+  }
+  
+  if (location1.y > height) {
+    velocity1.y = velocity1.y * -0.95; 
+    location1.y = height;
+  }
+  
+  stroke(255);
+*****
+
+***** ball-bouncing.txt
+  ellipse(location.x,location.y,48,48);
+}
+***** BALL-BOUNCING-NEW.TXT
+  ellipse(location.x,location.y,48,48);
+  
+  stroke(242,229,203);
+  strokeWeight(5);
+  fill(175, 76, 101);
+  ellipse(location1.x,location1.y,30,30);
+}
+*****
+

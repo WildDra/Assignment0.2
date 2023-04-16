@@ -1,0 +1,73 @@
+Comparing files ball-colliding.txt and BALL-COLLIDING-NEW.TXT
+***** ball-colliding.txt
+      PVector[] bTemp = {
+        new PVector(), new PVector()
+      };
+***** BALL-COLLIDING-NEW.TXT
+      PVector[] bTemp = {
+        new PVector(), new PVector(), new PVector()
+      };
+*****
+
+***** ball-colliding.txt
+      PVector[] vTemp = {
+        new PVector(), new PVector()
+      };
+***** BALL-COLLIDING-NEW.TXT
+      PVector[] vTemp = {
+        new PVector(), new PVector(), new PVector()
+      };
+*****
+
+***** ball-colliding.txt
+      PVector[] vFinal = {  
+        new PVector(), new PVector()
+      };
+***** BALL-COLLIDING-NEW.TXT
+      PVector[] vFinal = {  
+        new PVector(), new PVector(), new PVector()
+      };
+*****
+
+***** ball-colliding.txt
+      PVector[] bFinal = { 
+        new PVector(), new PVector()
+      };
+***** BALL-COLLIDING-NEW.TXT
+      PVector[] bFinal = { 
+        new PVector(), new PVector(), new PVector()
+      };
+*****
+
+***** ball-colliding.txt
+  new Ball(100, 400, 20), 
+  new Ball(700, 400, 80) 
+};
+***** BALL-COLLIDING-NEW.TXT
+  new Ball(100, 400, 20), 
+  new Ball(700, 400, 80), 
+  new Ball(300, 400, 40)
+};
+*****
+
+***** ball-colliding.txt
+    b.checkBoundaryCollision();
+  }
+  
+  balls[0].checkCollision(balls[1]);
+}
+
+***** BALL-COLLIDING-NEW.TXT
+    b.checkBoundaryCollision();
+  }  
+  balls[0].checkCollision(balls[1]);
+  balls[0].checkCollision(balls[2]);
+  balls[2].checkCollision(balls[1]);
+
+*****
+
+***** ball-colliding.txt
+***** BALL-COLLIDING-NEW.TXT
+}
+*****
+
